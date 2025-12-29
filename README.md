@@ -1,111 +1,59 @@
-# A systems-thinking art piece about entropy, order, and collapse. 
+# Binary Entropy Collapse Model
 
+> A deterministic binary-state simulation with injected noise, used to visualize entropy, stabilization, and collapse over time.
 
-Why'd I build this?
+**What is this?**
 
-**I had this weird dream about the push and pull between chaos and order, but framed as a binary that equalizes itself when given energy over time. Developed this visual simulation.**
+This project is a small systems visualization / toy model that explores how a simple deterministic binary system behaves when exposed to continuous, non-linear entropy injection.
 
-**TL;DR** 
+At each tick, the system:
 
-> Order devolves into chaos over time, chaos creates emergent structure, noise is fed into the system across 'x' time; both agents try to stabilize the system.
-> This could be used as a fun 'jitter-like' binary number generator, or used as a framework for a simple community game (one player is X, the other is Y, across a Z axis) .  
-> Simulates entropy stabilization as binary state progression.
+> advances a deterministic state transition
+> injects bounded noise
+> attempts to stabilize toward equilibrium
+> visually demonstrates when and how collapse occurs
 
-A programmable entropy surface built to test the application of recursive collapse on systems.
+The result is a live visualization of emergent structure vs instability.
 
-This system simulates a deterministic loop influenced by non-linear entropy fluctuations.  
+**Why I built it**
 
+This was built as a thinking tool! It was also my intro to Github. 
+A way to reason about:
 
+> how small entropy inputs accumulate
+> how systems temporarily stabilize
+> why collapse is inevitable beyond certain thresholds
 
+It is not a production RNG and not cryptographically secure, but it is useful for intuition-building around entropy, noise, and state progression.
 
-### ⌁ System Visuals
+Core Model
 
-<p align="center">
-  <img src="assets/base_interact.png" width="720" alt="BASE QUADRANT 1" />
-  <br />
-  <img src="assets/iterate.png" width="720" alt="Iteration " />
-  <br />
-  <img src="assets/sim.gif" width="720" alt="S.i.m Entropy Loop" />
-</p>
+Let:
 
----
-
-### 🛠 Local Setup
-
-This system runs as a React-based entropy engine.  
-To observe the collapse loop locally:
-
-```bash
-git clone https://github.com/0north-eth/zk-chaos-vm.git
-cd zk-chaos-vm
-
-1.npm install
-2.npm start
-3.http://localhost:3000
-
-**Watch the binaries try to equalize**
-
-### Ψ Core Mechanics
-
-Let `S` = system state  
-Let `T` = tick (frame progression)  
-Let `ΔS` = change in state over time
-
-We define:
+S = system state
+T = tick (frame)
+e = bounded entropy input
 
 ΔS = f(T) + e
+As e increases relative to system constraints, stabilization fails and collapse becomes visible.
 
+**What this can be useful for**
 
-Where `f(T)` represents expected structural flow and `e ∈ E` is emergent entropy injected per tick.  
-The system strives for `ΔS → 0`, yet collapse is unavoidable as `e` exceeds stability thresholds.
+Visualizing entropy injection in deterministic systems
+Toy-model intuition for RNG jitter and instability
+Game systems & simulation thinking
+Teaching or experimenting with emergent behavior
 
-At frame `Tₙ`, the system visualizes entropy saturation.
+**Tech Stack**
 
+React
+Tick-based simulation loop
+
+This project is intentionally small, visual, and exploratory.
 ---
 
-###  Interpretation
 
-This toy system treats **chaos and order as binary runtime states**.
-
-- Chaos is the default information signal within an environment that has not yet collapsed into structure.
-- Order emerges as **low-entropy pockets** attempting to stabilize information.
-- This model runs a visual loop where **entropy is injected** and the system tries, and fails, to contain it.
-
-It's not designed to succeed persay, more as just a systems visualization of something theoretical.  
-> Everything starts as noise.
-> Everything seeks order or devolves into chaos.
-> That can be mapped onto a binary
-  
-This is a **live visual runtime map** used to explore the push/pull between entropy and meaning.
-
-Eventually, this system can serve as:
-- A compression model for unusual runtime environments
-- A generative map for entropic cipher logic (this is a really cool idea, bascially a special number generator)
-> The VM's recursive collapse can serve as bit-mapping for entropic systems
-
----
-
----
-### ⌁ OBSERVE
-
-- Kernel interface  
-- Layer-zero execution path  
-- Instability encoded into state progression  
-- Graphical proof of order | decay symmetry  
-- Runtime inputs = non-linear ∴ loop behavior is emergent
-
----
-
-### FgkaFhZ9EWESZWV9BQ8SCRgUFgkaFhZ9EWESZWV9BQ8SCRgUFgkaFhZ9EWESZWV9BQ8SCRg+SAgVZW97F2EHDX96CWEHDXMUFQAKZWJ8AxVzDBZwDW1zBnl6DAQQERZjCxUbZXtxbGEHDX9nYhIKFmJxD2EcAxZ7EAUWFxl3CgAcFhZ2Bw8WBGJ8YgQdEWR7EhhzAWR9FAQAZXcUARMKFWJ7BRMSFX59AWEFDGRgFwAfZXt1AQkaC3MUBw8FDGR7DAwWC2IaYhsLEH8UGBkGDBZuGhQaZTw+YQ4JZQ==
-
-> `ψ`  
-> The system leaks state.  
-
-
----
-
-Operated by [`0north.eth`](https://github.com/0north-eth)  
-Entropy-injected runtime | i work in real zk-systems | systems visualizations 
+Built by [`0north.eth`](https://github.com/0north-eth)  
 
   
 **ZERO NORTH** ⦿ **ZERO NORTH**
